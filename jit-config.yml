@@ -1,0 +1,9 @@
+applications:
+- application_name: test
+  headers: []
+  swagger_file_paths:
+  - test.com
+  type: api
+- application_name: test
+  type: web
+  url: https://test.com
