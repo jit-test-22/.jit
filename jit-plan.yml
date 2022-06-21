@@ -1,5 +1,6 @@
 name: My plan
 level: beginner
+update_id: 847252a6-24e7-45cb-8ed5-e89dd059c232
 author: Jit
 version: 0.1
 owners:
@@ -8,84 +9,59 @@ references:
   - https://www.jit.io
 tags: []
 items:
-  - name: Require Branch Protection for SCM
-    uses: >-
-      jitsecurity-controls/jit-plans/items/third_party_app/item-branch-protection-scm.yml@latest
-  - name: Scan code for vulnerabilities
-    uses: >-
-      jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
-  - name: Scan container images
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
-  - name: Scan code dependencies for vulnerabilities
-    uses: jitsecurity-controls/jit-plans/items/code/item-dependency-check.yml@latest
-  - name: Scan IaC for static misconfigurations
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
-  - name: Scan code for hard-coded secrets
-    uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
   - name: Allow account direct deletion
     uses: jitsecurity-controls/jit-plans/items/data/item-account-deletion.yml@latest
   - name: Do not share account services accross applications
-    uses: >-
-      jitsecurity-controls/jit-plans/items/third_party_app/item-account-services-sharing.yml@latest
-  - name: >-
-      Grant access to production only to engineers and employees with admin
-      duties
-    uses: >-
-      jitsecurity-controls/jit-plans/items/third_party_app/item-admin-privilege.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/third_party_app/item-account-services-sharing.yml@latest
+  - name: Grant access to production only to engineers and employees with admin duties
+    uses: jitsecurity-controls/jit-plans/items/third_party_app/item-admin-privilege.yml@latest
   - name: Ensure your API is secure
     uses: jitsecurity-controls/jit-plans/items/runtime/item-api-security.yml@latest
   - name: Store application client ID and secret securely
-    uses: >-
-      jitsecurity-controls/jit-plans/items/data/item-app-credentials-storage.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/data/item-app-credentials-storage.yml@latest
   - name: Don't ask for the user Github password
-    uses: >-
-      jitsecurity-controls/jit-plans/items/third_party_app/item-ask-third-party-password.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/third_party_app/item-ask-third-party-password.yml@latest
+  - name: Require Branch Protection for SCM
+    uses: jitsecurity-controls/jit-plans/items/third_party_app/item-branch-protection-scm.yml@latest
   - name: Ensure your logs are shipped to a central place
-    uses: >-
-      jitsecurity-controls/jit-plans/items/operations/item-central-log-shipping.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/operations/item-central-log-shipping.yml@latest
   - name: Ensure your serverless functions are configured properly
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-check-functions-config.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-check-functions-config.yml@latest
+  - name: Scan code for vulnerabilities
+    uses: jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
+  - name: Scan container images
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
   - name: Use dedicated Github App for each device type (desktop/mobile)
-    uses: >-
-      jitsecurity-controls/jit-plans/items/third_party_app/item-dedicated-app-per-device-type.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/third_party_app/item-dedicated-app-per-device-type.yml@latest
+  - name: Scan code dependencies for vulnerabilities
+    uses: jitsecurity-controls/jit-plans/items/code/item-dependency-check.yml@latest
   - name: Use Github OAuth or Github App token to communicate with Github API
-    uses: >-
-      jitsecurity-controls/jit-plans/items/third_party_app/item-github-api-access.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/third_party_app/item-github-api-access.yml@latest
   - name: Use Github App instead of Github OAuth app
-    uses: >-
-      jitsecurity-controls/jit-plans/items/third_party_app/item-github-app-type.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/third_party_app/item-github-app-type.yml@latest
+  - name: Scan IaC for static misconfigurations
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
   - name: Create Incident Response plan
-    uses: >-
-      jitsecurity-controls/jit-plans/items/operations/item-incident-response-plan.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/operations/item-incident-response-plan.yml@latest
   - name: Adhere to the Least Privilege Principle
-    uses: >-
-      jitsecurity-controls/jit-plans/items/third_party_app/item-least-privilege-principle.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/third_party_app/item-least-privilege-principle.yml@latest
   - name: Ensure log format includes critical fields
-    uses: >-
-      jitsecurity-controls/jit-plans/items/operations/item-logs-format.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/operations/item-logs-format.yml@latest
   - name: Require MFA for SCM
-    uses: >-
-      jitsecurity-controls/jit-plans/items/third_party_app/item-mfa-scm.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/third_party_app/item-mfa-scm.yml@latest
   - name: Implement RBAC in your app
     uses: jitsecurity-controls/jit-plans/items/third_party_app/item-rbac.yml@latest
+  - name: Scan code for hard-coded secrets
+    uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
   - name: Encrypt any secret data
-    uses: >-
-      jitsecurity-controls/jit-plans/items/data/item-secret-encryption.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/data/item-secret-encryption.yml@latest
   - name: All services should have unique login and credentials
-    uses: >-
-      jitsecurity-controls/jit-plans/items/third_party_app/item-third-party-account-sharing.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/third_party_app/item-third-party-account-sharing.yml@latest
   - name: Encrypt traffic in transit
-    uses: >-
-      jitsecurity-controls/jit-plans/items/data/item-traffic-encryption.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/data/item-traffic-encryption.yml@latest
   - name: Delete Github user data within 30 days of deletion request
-    uses: >-
-      jitsecurity-controls/jit-plans/items/data/item-user-data-deletion.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/data/item-user-data-deletion.yml@latest
   - name: Conduct periodic vulnerability scans
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-vulnerability-scan.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-vulnerability-scan.yml@latest
   - name: Run a web application scanner
-    uses: >-
-      jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
