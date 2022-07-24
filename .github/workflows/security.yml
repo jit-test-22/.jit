@@ -128,6 +128,6 @@ jobs:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
         security_control: ghcr.io/jitsecurity-controls/control-gitleaks-alpine:latest
-        security_control_args: detect --config /config/gitleaks.toml --source /code -v --report-format json --report-path /tmp/report.json --redact --no-git
+        security_control_args: detect --config /config/gitleaks.toml --source /code -v --report-format json --report-path /tmp/report.json --redact --no-git --exit-code 0
         security_control_output_file: /tmp/report.json
         dispatch_type: workflow
