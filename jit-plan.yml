@@ -1,6 +1,5 @@
 name: My plan
 level: beginner
-update_id: fdc177c8-5997-4ab3-b6aa-323c1c378da3
 author: Jit
 version: 0.1
 owners:
@@ -9,8 +8,6 @@ references:
   - https://www.jit.io
 tags: []
 items:
-  - name: Ensure your API is secure
-    uses: jitsecurity-controls/jit-plans/items/runtime/item-api-security.yml@latest
   - name: Require Branch Protection for SCM
     uses: jitsecurity-controls/jit-plans/items/third_party_app/item-branch-protection-scm.yml@latest
   - name: Scan code for vulnerabilities
@@ -25,5 +22,3 @@ items:
     uses: jitsecurity-controls/jit-plans/items/third_party_app/item-mfa-scm.yml@latest
   - name: Scan code for hard-coded secrets
     uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
-  - name: Run a web application scanner
-    uses: jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
